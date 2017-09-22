@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:5-alpine
 
 LABEL maintainer=ymajik@gmail.com
 
@@ -13,7 +13,7 @@ LABEL maintainer=ymajik@gmail.com
 
 RUN apk add --no-cache git libssh2 openssl-dev &&\
     rm -rf /var/cache/apk/*
-RUN npm install -g  git-hours
+RUN npm install -g git-hours
 
 WORKDIR /code
 
