@@ -1,4 +1,4 @@
-FROM node:4-alpine
+FROM node:6-alpine
 
 LABEL maintainer=ymajik@gmail.com
 
@@ -12,8 +12,8 @@ LABEL maintainer=ymajik@gmail.com
 #   org.label-schema.schema-version="1.0"
 
 RUN apk add --no-cache git libssh2 openssl-dev &&\
-    rm -rf /var/cache/apk/*
-RUN npm install -g git-hours
+    rm -rf /var/cache/apk/* &&\
+    npm install -g git-hours
 
 WORKDIR /code
 
