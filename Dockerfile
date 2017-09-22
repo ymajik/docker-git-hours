@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:5
 
 LABEL maintainer=ymajik@gmail.com
 
