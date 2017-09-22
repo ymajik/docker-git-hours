@@ -1,4 +1,4 @@
-FROM node:5-alpine
+FROM node:4-alpine
 
 LABEL maintainer=ymajik@gmail.com
 
