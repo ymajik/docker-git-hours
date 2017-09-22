@@ -13,9 +13,8 @@ LABEL maintainer=ymajik@gmail.com
 
 RUN apk add --no-cache git libssh2 openssl-dev &&\
     rm -rf /var/cache/apk/*
-RUN npm install -g node-gyp &&\
-    npm install -g nodegit #ssh-executor
 RUN npm install -g  git-hours
+
 WORKDIR /code
 
 CMD git hours
