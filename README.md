@@ -1,7 +1,6 @@
 # ymajik/git-hours
 
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/ymajik/git-hours/builds/)
-
 [![Build Status](https://travis-ci.org/ymajik/docker-git-hours.svg)](https://travis-ci.org/ymajik/docker-git-hours)
 
 - [Introduction](#introduction)
