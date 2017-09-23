@@ -12,7 +12,13 @@ LABEL maintainer=ymajik@gmail.com
 #   org.label-schema.schema-version="1.0"
 
 RUN apk add --no-cache git libssh2 openssl-dev &&\
-    rm -rf /var/cache/apk/* &&\
+    rm -rf /var/cache/apk/*
+    # Set unsafe perms when run as root, or, alternatively, run as a non-root user
+RUN npm init -y && \
+    npm config set unsafe-perm true && \
+    BUILD_ONLY=true npm install --save nodegit && \
+    #npm install nodegit@0.15.1 && \
+    npm prune --production && \
     npm install -g git-hours
 
 WORKDIR /code
